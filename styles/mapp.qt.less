@@ -1,0 +1,99 @@
+@import 'mapp.colors.less';
+@import 'mapp.qt.fonts.less';
+@import 'mapp.qt.icons.less';
+@import 'mapp.qt.mixins.less';
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, div.editor, section.menu, section.canvas  {
+	height: 100%;
+	font-family: open-sans, Helvetica, Roboto, Arial, sans-serif;
+	font-size: 13px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+canvas{
+    vertical-align: middle;
+}
+
+header {
+	background-color: #ffffff;
+	border-bottom: 1px solid @hxg-border;
+
+	.banner {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+    	height: 53px;
+    	width: 100%;
+
+		.logo {
+			margin: 8px 10px 0px 10px;
+			font-size: 32px;
+			color: #444;
+		}
+		.title {
+			.first {
+				font-size: 24px;
+				font-weight: bold
+			}
+			
+			.second {
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: .5px;
+				text-transform: uppercase;
+				color: @hxg-blue-low-alpha;
+				margin-top: -4px;
+			}
+		}
+	}
+
+	.green-line {
+		width: 100%;
+    	height: 6px;
+    	background-image: url(../assets/img/green-background.png);
+    	background-repeat: repeat-x;
+    	border: none;
+	}
+}
+
+body > content {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+section.canvas {
+	
+	background: @hxg-lightergrey; 
+	background: -webkit-linear-gradient(left top, @hxg-lightergrey, #aaa); 
+	background: -o-linear-gradient(bottom right, @hxg-lightergrey, #aaa); 
+	background: -moz-linear-gradient(bottom right, @hxg-lightergrey, #aaa);
+	background: linear-gradient(to bottom right, @hxg-lightergrey, #aaa); 
+	
+	overflow: auto;
+	flex-grow: 1;
+
+	div.le-canvas-container {
+		padding: 20px;
+
+		> div {
+			background-color: white;
+			display: inline-block;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 8px;
+			
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}

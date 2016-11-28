@@ -1,0 +1,17 @@
+{
+  "name": "quad-tree-thing",
+  "authors": [
+    "Ulrich Fischer"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "knockout": "~3.4.1"
+  }
+}

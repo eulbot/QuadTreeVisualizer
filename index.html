@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="dist/mapp.qt.css">
+
+    <title>Quad Tree Visualizer</title>
+</head>
+
+<body class="mapp-qt">
+
+    <header data-bind="template: { name: 'header-template' }">
+    </header>
+
+    <content data-bind="template: {name: 'canvas-template', data: canvas}">
+    </content>
+
+    <footer>
+    </footer>
+
+    <script src="dist/mapp.qt.js"></script>
+</body>
